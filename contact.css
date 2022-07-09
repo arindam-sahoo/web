@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url(./images/sunset-vector-wallpaper.jpg);
+    background-position: center;
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-shadow: 0 0 10px rgb(225, 101, 75);
+}
+
+h1 {
+    color: white;
+    animation: rise 1.5s ease;
+}
+
+.contactbox {
+    width: 50%;
+    height: 50%;
+    background-color: rgba(225,102,75,0.25);
+    color: white;
+    border-radius: 20px;
+    padding-top: 20px;
+    animation: drop 1.5s ease;
+}
+
+.contactbox input,
+textarea {
+    width: 80%;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.contactbox input[type="text"],
+input[type="email"],
+textarea {
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: rgb(40,30,60);
+    font-size: 16px;
+}
+
+.contactbox input[type="submit"] {
+    border: 1px solid rgb(40,30,60);
+    height: 40px;
+    background: transparent;
+    color: rgb(40,30,60);
+    font-size: 18px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.contactbox input[type="submit"]:hover {
+    cursor: pointer;
+    background: rgb(40,30,60);
+    color: rgb(225, 101, 75);
+}
+
+.links img {
+    height: 60px;
+    width: 60px;
+    margin:30px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    border-radius: 50%;
+    animation: rise_ 1.5s ease;
+}
+
+.links img:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+@keyframes drop {
+    0% {
+        opacity: 0;
+        transform: translateY(-80px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes rise {
+    0% {
+        opacity: 0;
+        transform: translateY(160px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes rise_ {
+    0% {
+        opacity: 0;
+        transform: translateY(320px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
