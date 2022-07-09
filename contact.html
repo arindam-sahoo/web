@@ -66,13 +66,29 @@
                 <h1>Contact
                     <span style="color: rgb(40,30,60);">Arindam</span>
                 </h1>
-                <form method="post" action="contact.php">
-                    <input type="text" name="" placeholder="Your Name"><br>
-                    <input type="email" name="" placeholder="Your eMail ID"><br>
-                    <textarea name="" placeholder="Type your message"></textarea><br>
-                    <input type="submit" name="" value="Send">
+                <form onsubmit="sendEmail(); reset(); return false;">
+                    <input type="text" id="nsme" name="" placeholder="Your Name *" required><br>
+                    <input type="email" id="email" name="" placeholder="Your eMail ID *" required><br>
+                    <textarea name="" id="message" placeholder="Type your message *"></textarea><br>
+                    <button type="submit">Send</button>
                 </form>
             </div>
         </center>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script>
+            function sendEmail() {
+                Email
+                    .send({
+                    SecureToken: "e49a5b56-af08-47a4-b66f-f6f8e6dbe4e1",
+                    To: 'averagecoder2021@gmail.com',
+                    From: document.getElementById("email").value,
+                    Subject: "Someone Wants to Reach You",
+                    Body: "Name : " + document.getElementById("name").value
+                    + "<br> Email : " + document.getElementById("email").value
+                    + "<br> Message : " + document.getElementById("message").value
+                })
+                    .then(message => alert("Message Sent Successfully! Have a Nice Day!!"));
+            }
+        </script>
     </body>
 </html>
