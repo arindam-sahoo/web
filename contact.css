@@ -53,8 +53,7 @@ textarea {
     font-size: 16px;
 }
 
-button {
-    width: 100%;
+.contactbox input[type="submit"] {
     border: 1px solid rgb(40,30,60);
     height: 40px;
     background: transparent;
@@ -64,7 +63,7 @@ button {
     margin-top: 20px;
 }
 
-button:hover {
+.contactbox input[type="submit"]:hover {
     cursor: pointer;
     background: rgb(40,30,60);
     color: rgb(225, 101, 75);
